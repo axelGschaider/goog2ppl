@@ -5,6 +5,8 @@ A Python script to convert Google Contacts to a format readable by [ppl](http://
 
 Takes a vcf file and splits it into separate cards named after the
 camelcase contents of their `N:` (name) lines. 
+Takes a vcf file and splits it into separate cards. These cards are named after the lowercase elements of their `N:` (name) lines. These elements are connected by a `_`. This is ought to mimic the naming of `ppl scrape`. Overwriting existing vCards is prevented by adding a counter to the name if the card already exists. 
+Contrary to the original script by `shushcat` this version leaves the `N:` line untouched.
 
 ##Caveats
 * Hardly tested, but works for me. So backup first!
