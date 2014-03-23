@@ -21,7 +21,8 @@ for line in source:
             lof[0], lof[1] = lof[1], lof[0]
             allLowercase   = [x.rstrip().lower() for x in lof]
             filteredFields = filter(None, allLowercase)
-            contact = "_".join( filteredFields )
+            # replace ' ' with '_' to handle names like "van Zandt" gracefully
+            contact = "_".join( filteredFields ).replace(' ', '_')
 
 
             # contact = (re.sub(r'(N:)(.+)(;;;)', r'\2', line)).replace(';','')
