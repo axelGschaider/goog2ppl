@@ -7,7 +7,9 @@ import os
 # Gets first command line argument
 source = open(sys.argv[1])
 
-contact = ''
+filenameDefault = 'somethingWentWrongWithTheName'
+
+contact = filenameDefault
 outCard = []
 
 cardNum = 0
@@ -43,3 +45,5 @@ for line in source:
             outfile.write("%s" % line)
         outCard = []
         cardNum = cardNum + 1
+        contact = filenameDefault
+
