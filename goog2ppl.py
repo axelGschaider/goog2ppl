@@ -38,7 +38,7 @@ for line in source:
         counter = 1
         # increment a counter in filename if the original name allready exists
         while os.path.exists( filename ):
-            filename = contact + ("_(%s).vcf" % counter )
+            filename = contact + ("_%s.vcf" % counter )
             counter += 1
         outfile = open(filename, 'w')
         for line in outCard:
